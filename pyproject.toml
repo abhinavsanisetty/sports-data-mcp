@@ -1,0 +1,52 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "sports-data-mcp"
+version = "0.1.0"
+description = "StatMuse-style historical sports query access via MCP"
+authors = []
+readme = "README.md"
+packages = [{ include = "sports_data_mcp", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+pydantic = ">=2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0"
+pytest-asyncio = ">=0.23"
+pytest-xdist = ">=3.0"
+vcrpy = ">=6.0"
+responses = ">=0.25"
+respx = ">=0.21"
+hypothesis = ">=6.0"
+syrupy = ">=4.0"
+ruff = ">=0.4"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+# ---------------------------------------------------------------------------
+# Default model IDs (§5.3) — can be overridden via env vars
+#
+# SPORTS_MCP_MODEL: Claude Haiku for NL routing and name resolution
+#   claude-haiku-4-5-20251001 is the current stable snapshot (verify at:
+#   https://docs.anthropic.com/en/docs/models-overview)
+#
+# SPORTS_MCP_EVAL_GENERATOR_MODEL: Gemini Flash for eval question generation (§3.36)
+#   gemini-2.0-flash was current as of Aug 2025; verify the latest stable at:
+#   https://ai.google.dev/gemini-api/docs/models/gemini
+# ---------------------------------------------------------------------------
+[tool.sports_data_mcp]
+default_model = "claude-haiku-4-5-20251001"
+default_eval_generator_model = "gemini-2.0-flash"
