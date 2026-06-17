@@ -39,14 +39,13 @@ asyncio_mode = "auto"
 # ---------------------------------------------------------------------------
 # Default model IDs (§5.3) — can be overridden via env vars
 #
-# SPORTS_MCP_MODEL: Claude Haiku for NL routing and name resolution
-#   claude-haiku-4-5-20251001 is the current stable snapshot (verify at:
-#   https://docs.anthropic.com/en/docs/models-overview)
+# Both SPORTS_MCP_MODEL and SPORTS_MCP_EVAL_GENERATOR_MODEL use Gemini 2.0 Flash.
+# The project is completely free — only requires a free GEMINI_API_KEY from
+# Google AI Studio (ai.google.dev) — 1,500 req/day, 15 RPM, no billing required.
 #
-# SPORTS_MCP_EVAL_GENERATOR_MODEL: Gemini Flash for eval question generation (§3.36)
-#   gemini-2.0-flash was current as of Aug 2025; verify the latest stable at:
+# Verify the latest stable Gemini Flash model ID at:
 #   https://ai.google.dev/gemini-api/docs/models/gemini
 # ---------------------------------------------------------------------------
 [tool.sports_data_mcp]
-default_model = "claude-haiku-4-5-20251001"
+default_model = "gemini-2.0-flash"
 default_eval_generator_model = "gemini-2.0-flash"

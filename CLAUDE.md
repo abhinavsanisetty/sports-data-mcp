@@ -1,6 +1,6 @@
 # sports-data-mcp
 
-Open-source Python MCP server that gives AI agents StatMuse-style historical sports query access across all major sports (NBA, NFL, MLB, NHL, soccer, NCAA). No live data — historical and analytical only. Free for users beyond their own Anthropic API costs.
+Open-source Python MCP server that gives AI agents StatMuse-style historical sports query access across all major sports (NBA, NFL, MLB, NHL, soccer, NCAA). No live data — historical and analytical only. Completely free to use — only requires a free `GEMINI_API_KEY` from Google AI Studio (ai.google.dev, 30 seconds to obtain).
 
 ## Start here
 
@@ -23,7 +23,7 @@ Phase order:
 0. Tool contract (`tools/contract.py`, `stats/canonical.py`, `types.py`) — ~150–300 lines, no logic
 1. Eval datasets + golden facts (against the contract) — stub server returns "not_implemented" so harness is wired before code exists
 2. Skeleton & infrastructure (cache, resilience, http_client, single_flight, server)
-3. Name & stat resolution (Haiku-based)
+3. Name & stat resolution (Gemini-based)
 4. First two adapters (NBA + MLB)
 5. Remaining adapters (NFL, NHL, soccer, NCAA)
 6. NL fallback tool
@@ -31,10 +31,9 @@ Phase order:
 
 ## Things to verify in Phase 0 (model IDs may need refresh)
 
-- **Anthropic Haiku model ID** — verify the current latest stable Haiku snapshot against Anthropic docs and set it as the `SPORTS_MCP_MODEL` default
-- **Google Gemini Flash model ID** — verify the current latest Gemini Flash against Google docs and set it as the `SPORTS_MCP_EVAL_GENERATOR_MODEL` default
+- **Google Gemini Flash model ID** — verify the current latest Gemini Flash against Google docs (ai.google.dev) and set it as the default for both `SPORTS_MCP_MODEL` and `SPORTS_MCP_EVAL_GENERATOR_MODEL`
 
-These were left parameterized in the plan because exact IDs change frequently.
+Both env vars use the same model. Currently set to `gemini-2.0-flash` — update if a newer stable snapshot exists.
 
 ## How the user wants to work
 
@@ -49,7 +48,7 @@ These were left parameterized in the plan because exact IDs change frequently.
 - SQLite cache with `CACHE_VERSION` versioned keys + clear CLI (§2.4)
 - Canonical core + typed per-sport extension schema (§3.34, closes Open Q 4.2)
 - Cache write rule: write only if `is_meaningful(result) AND not _meta.below_threshold` (§4.7 revised)
-- NL eval runs nightly with gate + cheap smoke on PR (§3.16 revised after Opus review) — NOT per-PR with real Haiku
+- NL eval runs nightly with gate + cheap smoke on PR (§3.16 revised after Opus review) — NOT per-PR with real Gemini
 - Integration test failures categorized: code = hard fail, source = soft fail (§3.8 revised)
 - On query timeout, single-flight worker continues to completion — no separate prefetch (§4.5.c revised)
 
