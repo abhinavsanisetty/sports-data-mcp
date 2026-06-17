@@ -80,7 +80,7 @@ class ListSportsArgs(BaseModel):
 
 
 # ---------------------------------------------------------------------------
-# NL execution plan — produced by Haiku in tools/nl_query.py (§4.3.d)
+# NL execution plan — produced by Gemini in tools/nl_query.py (§4.3.d)
 #
 # The tool field is a strict Literal enum; any value outside this set is a
 # Pydantic validation error, which the NL tool converts to a clean error
@@ -90,7 +90,7 @@ class ListSportsArgs(BaseModel):
 
 
 class ExecutionPlan(BaseModel):
-    """Validated routing plan returned by Claude Haiku for nl_sports_query."""
+    """Validated routing plan returned by Gemini 2.0 Flash for nl_sports_query."""
 
     tool: ToolNameLiteral
     args: dict[str, str | int | float | bool | None]

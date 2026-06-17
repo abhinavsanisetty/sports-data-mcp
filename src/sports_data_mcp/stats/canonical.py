@@ -4,7 +4,7 @@ Canonical stat enums per sport (§2.3, §5.4 Phase 0).
 These enums define the single source of truth for stat naming across the project:
 - Tool documentation and list_sports output reference these names
 - Adapter alias dicts map source-native names to these values (Phase 3+)
-- Haiku fallback in stats/resolver.py uses these as the resolution target
+- Gemini fallback in stats/resolver.py uses these as the resolution target
 
 NBA and MLB are fully populated here (needed by Phase 1 eval generation).
 NFL, NHL, Soccer, and NCAA enums are filled in alongside their adapters (Phase 5).
