@@ -76,7 +76,8 @@ def _call_gemini(prompt: str, api_key: str) -> str:
 
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(_GENERATOR_MODEL)
-    response = model.generate_content(prompt)
+    config = genai.GenerationConfig(temperature=0)
+    response = model.generate_content(prompt, generation_config=config)
     return response.text
 
 

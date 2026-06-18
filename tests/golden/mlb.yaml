@@ -161,10 +161,10 @@
 
 - fact_id: mlb.golden.020
   sport: mlb
-  question: "How many career no-hitters did Nolan Ryan throw?"
-  expected_value: "7"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/Nolan_Ryan
+  question: "What is Joe DiMaggio's career RBI total?"
+  expected_value: "1537"
+  stat: rbi
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
   verified_against: wikipedia
 
 - fact_id: mlb.golden.021
@@ -329,10 +329,10 @@
 
 - fact_id: mlb.golden.040
   sport: mlb
-  question: "How many Cy Young Awards did Randy Johnson win?"
-  expected_value: "5"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/Randy_Johnson
+  question: "What is Joe DiMaggio's career home run total?"
+  expected_value: "361"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
   verified_against: wikipedia
 
 - fact_id: mlb.golden.041
@@ -379,9 +379,9 @@
 
 - fact_id: mlb.golden.046
   sport: mlb
-  question: "How many Cy Young Awards did Roger Clemens win?"
-  expected_value: "7"
-  stat: wins
+  question: "How many strikeouts did Roger Clemens record in the 1986 season?"
+  expected_value: "238"
+  stat: strikeouts_pitching
   source_url: https://en.wikipedia.org/wiki/Roger_Clemens
   verified_against: wikipedia
 

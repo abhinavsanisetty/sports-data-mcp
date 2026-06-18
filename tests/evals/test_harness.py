@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+import yaml
+
 from sports_data_mcp.stub import StubServer
 from tests.evals.harness import run_harness
 
@@ -12,9 +16,7 @@ def test_all_seeds_fail_against_stub():
 
 
 def test_one_seed_passes_stub_overridden():
-    seeds_path = __import__("pathlib").Path(__file__).parent / "seeds.yaml"
-    import yaml
-
+    seeds_path = Path(__file__).parent / "seeds.yaml"
     raw = yaml.safe_load(seeds_path.read_text())
     first = raw[0]
     first_tool = first["expected_plan"]["tool"]

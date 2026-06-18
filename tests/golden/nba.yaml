@@ -139,18 +139,18 @@
 
 - fact_id: nba.golden.017
   sport: nba
-  question: "What was the Chicago Bulls' regular season win-loss record in 1995-96?"
-  expected_value: "72-10"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  question: "How many rebounds per game did LeBron James average in the 2022-23 season?"
+  expected_value: "8.3"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
   verified_against: wikipedia
 
 - fact_id: nba.golden.018
   sport: nba
-  question: "What was the Chicago Bulls' playoff record in the 1995-96 season?"
-  expected_value: "15-3"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  question: "How many assists per game did LeBron James average in the 2022-23 season?"
+  expected_value: "6.8"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
   verified_against: wikipedia
 
 - fact_id: nba.golden.019
@@ -265,18 +265,18 @@
 
 - fact_id: nba.golden.032
   sport: nba
-  question: "What was the Golden State Warriors' regular season win-loss record in 2015-16?"
-  expected_value: "73-9"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/2015%E2%80%9316_Golden_State_Warriors_season
+  question: "How many field goals did Wilt Chamberlain attempt in his 100-point game?"
+  expected_value: "63"
+  stat: field_goals_attempted
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
   verified_against: wikipedia
 
 - fact_id: nba.golden.033
   sport: nba
-  question: "Whose regular-season win record did the 2015-16 Warriors break?"
-  expected_value: "Chicago Bulls (72-10)"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/2015%E2%80%9316_Golden_State_Warriors_season
+  question: "How many rebounds per game did Magic Johnson average in the 1986-87 season?"
+  expected_value: "6.3"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
   verified_against: wikipedia
 
 # ─── Kareem Abdul-Jabbar stats ────────────────────────────────────────────────
@@ -291,10 +291,10 @@
 
 - fact_id: nba.golden.035
   sport: nba
-  question: "How many MVP awards did Kareem Abdul-Jabbar win?"
-  expected_value: "6"
-  stat: player_efficiency_rating
-  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
+  question: "How many rebounds per game did LeBron James average in the 2017-18 season?"
+  expected_value: "8.6"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
   verified_against: wikipedia
 
 - fact_id: nba.golden.036
@@ -341,18 +341,18 @@
 
 - fact_id: nba.golden.041
   sport: nba
-  question: "How many NBA championships did Magic Johnson win with the Lakers?"
-  expected_value: "5"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  question: "How many free throws did Wilt Chamberlain attempt in his 100-point game?"
+  expected_value: "32"
+  stat: free_throws_attempted
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
   verified_against: wikipedia
 
 - fact_id: nba.golden.042
   sport: nba
-  question: "How many MVP awards did Magic Johnson win?"
-  expected_value: "3"
-  stat: player_efficiency_rating
-  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  question: "How many total rebounds did Wilt Chamberlain grab in the 1960-61 season?"
+  expected_value: "2149"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
   verified_against: wikipedia
 
 # ─── LeBron James season stats ───────────────────────────────────────────────
@@ -375,18 +375,18 @@
 
 - fact_id: nba.golden.045
   sport: nba
-  question: "How many MVP awards has LeBron James won?"
-  expected_value: "4"
-  stat: player_efficiency_rating
-  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  question: "How many points per game did Michael Jordan average in his rookie 1984-85 season?"
+  expected_value: "28.2"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
   verified_against: wikipedia
 
 - fact_id: nba.golden.046
   sport: nba
-  question: "How many NBA championships has LeBron James won?"
-  expected_value: "4"
-  stat: wins
-  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  question: "How many total points did Kareem Abdul-Jabbar score in the 1971-72 season?"
+  expected_value: "2822"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
   verified_against: wikipedia
 
 - fact_id: nba.golden.047

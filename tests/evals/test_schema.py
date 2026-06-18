@@ -29,7 +29,7 @@ def load_seeds() -> list[SeedQuestion]:
 
 def test_seeds_load_and_validate():
     seeds = load_seeds()
-    assert len(seeds) >= 36, f"Expected >= 36 seeds, got {len(seeds)}"
+    assert len(seeds) >= 50, f"Expected >= 50 seeds, got {len(seeds)}"
 
 
 def test_seeds_cover_all_36_cells():
@@ -51,7 +51,7 @@ def test_golden_loads_and_validates(sport: str):
     golden_path = GOLDEN_DIR / f"{sport}.yaml"
     raw = yaml.safe_load(golden_path.read_text())
     facts = [GoldenFact.model_validate(entry) for entry in raw]
-    assert len(facts) >= 40, f"Expected >= 40 golden facts for {sport}, got {len(facts)}"
+    assert len(facts) >= 50, f"Expected >= 50 golden facts for {sport}, got {len(facts)}"
 
 
 @pytest.mark.parametrize("sport", ["nba", "mlb"])
