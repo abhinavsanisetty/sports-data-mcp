@@ -14,7 +14,6 @@ from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field
 
-
 # ---------------------------------------------------------------------------
 # Shared literals (duplicated here to keep this module import-free)
 # ---------------------------------------------------------------------------
