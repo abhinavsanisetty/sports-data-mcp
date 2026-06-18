@@ -1,0 +1,4 @@
+# Eval score thresholds — §3.16
+# Tunable here; enforced by the nightly CI gate (Phase 4+).
+score_overall: 0.85
+tool_correct_per_category: 0.90
