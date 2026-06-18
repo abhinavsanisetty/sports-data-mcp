@@ -1,0 +1,422 @@
+# NBA golden facts — verified via Wikipedia
+# Each fact was confirmed from the source URL before writing.
+
+# ─── Career scoring leaders ───────────────────────────────────────────────────
+
+- fact_id: nba.golden.001
+  sport: nba
+  question: "How many career points did Kareem Abdul-Jabbar score?"
+  expected_value: "38387"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
+
+- fact_id: nba.golden.002
+  sport: nba
+  question: "What is Karl Malone's career points total?"
+  expected_value: "36928"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
+
+- fact_id: nba.golden.003
+  sport: nba
+  question: "How many career points did Kobe Bryant score?"
+  expected_value: "33643"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
+
+- fact_id: nba.golden.004
+  sport: nba
+  question: "What is Michael Jordan's career points total?"
+  expected_value: "32292"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
+
+- fact_id: nba.golden.005
+  sport: nba
+  question: "What is Wilt Chamberlain's career points total?"
+  expected_value: "31419"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
+
+# ─── Career PPG leaders ───────────────────────────────────────────────────────
+
+- fact_id: nba.golden.006
+  sport: nba
+  question: "What is Michael Jordan's career points per game average?"
+  expected_value: "30.1"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.007
+  sport: nba
+  question: "What is Kareem Abdul-Jabbar's career points per game average?"
+  expected_value: "24.6"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
+  verified_against: wikipedia
+
+- fact_id: nba.golden.008
+  sport: nba
+  question: "What is Magic Johnson's career points per game average?"
+  expected_value: "19.5"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+# ─── Michael Jordan season stats ─────────────────────────────────────────────
+
+- fact_id: nba.golden.009
+  sport: nba
+  question: "How many points per game did Michael Jordan average in the 1986-87 season?"
+  expected_value: "37.1"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.010
+  sport: nba
+  question: "How many points per game did Michael Jordan average in the 1987-88 season?"
+  expected_value: "35.0"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.011
+  sport: nba
+  question: "How many points per game did Michael Jordan average in the 1995-96 season?"
+  expected_value: "30.4"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.012
+  sport: nba
+  question: "How many points per game did Michael Jordan average in the 1990-91 season?"
+  expected_value: "31.5"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.013
+  sport: nba
+  question: "How many scoring titles did Michael Jordan win in his career?"
+  expected_value: "10"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Michael_Jordan
+  verified_against: wikipedia
+
+- fact_id: nba.golden.014
+  sport: nba
+  question: "What were Michael Jordan's assists per game in the 1995-96 season?"
+  expected_value: "4.3"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.015
+  sport: nba
+  question: "What were Michael Jordan's rebounds per game in the 1995-96 season?"
+  expected_value: "6.6"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.016
+  sport: nba
+  question: "What were Michael Jordan's steals per game in the 1995-96 season?"
+  expected_value: "2.2"
+  stat: steals
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+# ─── 1995-96 Chicago Bulls ────────────────────────────────────────────────────
+
+- fact_id: nba.golden.017
+  sport: nba
+  question: "What was the Chicago Bulls' regular season win-loss record in 1995-96?"
+  expected_value: "72-10"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.018
+  sport: nba
+  question: "What was the Chicago Bulls' playoff record in the 1995-96 season?"
+  expected_value: "15-3"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.019
+  sport: nba
+  question: "How many rebounds per game did Dennis Rodman average in the 1995-96 season?"
+  expected_value: "14.9"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.020
+  sport: nba
+  question: "How many points per game did Scottie Pippen average in the 1995-96 season?"
+  expected_value: "19.4"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+# ─── Wilt Chamberlain records ─────────────────────────────────────────────────
+
+- fact_id: nba.golden.021
+  sport: nba
+  question: "What was Wilt Chamberlain's points per game average in the 1961-62 season?"
+  expected_value: "50.4"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.022
+  sport: nba
+  question: "How many total points did Wilt Chamberlain score in the 1961-62 season?"
+  expected_value: "4029"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.023
+  sport: nba
+  question: "What is Wilt Chamberlain's career rebounds per game average?"
+  expected_value: "22.9"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.024
+  sport: nba
+  question: "What is Wilt Chamberlain's career total rebounds?"
+  expected_value: "23924"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.025
+  sport: nba
+  question: "What was Wilt Chamberlain's single-season rebounding average record?"
+  expected_value: "27.2"
+  stat: rebounds
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.026
+  sport: nba
+  question: "On what date did Wilt Chamberlain score 100 points in a game?"
+  expected_value: "March 2, 1962"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.027
+  sport: nba
+  question: "How many field goals did Wilt Chamberlain make in his 100-point game?"
+  expected_value: "36"
+  stat: field_goals_made
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+- fact_id: nba.golden.028
+  sport: nba
+  question: "How many free throws did Wilt Chamberlain make in his 100-point game?"
+  expected_value: "28"
+  stat: free_throws_made
+  source_url: https://en.wikipedia.org/wiki/Wilt_Chamberlain
+  verified_against: wikipedia
+
+# ─── Stephen Curry 3-point records ───────────────────────────────────────────
+
+- fact_id: nba.golden.029
+  sport: nba
+  question: "How many three-pointers did Stephen Curry make in the 2015-16 season?"
+  expected_value: "402"
+  stat: three_pointers_made
+  source_url: https://en.wikipedia.org/wiki/Stephen_Curry
+  verified_against: wikipedia
+
+- fact_id: nba.golden.030
+  sport: nba
+  question: "How many points per game did Stephen Curry average in the 2015-16 season?"
+  expected_value: "30.1"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Stephen_Curry
+  verified_against: wikipedia
+
+- fact_id: nba.golden.031
+  sport: nba
+  question: "How many three-pointers did Stephen Curry need to pass Ray Allen's all-time record?"
+  expected_value: "2974"
+  stat: three_pointers_made
+  source_url: https://en.wikipedia.org/wiki/Stephen_Curry
+  verified_against: wikipedia
+
+# ─── 2015-16 Golden State Warriors ───────────────────────────────────────────
+
+- fact_id: nba.golden.032
+  sport: nba
+  question: "What was the Golden State Warriors' regular season win-loss record in 2015-16?"
+  expected_value: "73-9"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/2015%E2%80%9316_Golden_State_Warriors_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.033
+  sport: nba
+  question: "Whose regular-season win record did the 2015-16 Warriors break?"
+  expected_value: "Chicago Bulls (72-10)"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/2015%E2%80%9316_Golden_State_Warriors_season
+  verified_against: wikipedia
+
+# ─── Kareem Abdul-Jabbar stats ────────────────────────────────────────────────
+
+- fact_id: nba.golden.034
+  sport: nba
+  question: "How many games did Kareem Abdul-Jabbar play in his career?"
+  expected_value: "1560"
+  stat: games_played
+  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
+  verified_against: wikipedia
+
+- fact_id: nba.golden.035
+  sport: nba
+  question: "How many MVP awards did Kareem Abdul-Jabbar win?"
+  expected_value: "6"
+  stat: player_efficiency_rating
+  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
+  verified_against: wikipedia
+
+- fact_id: nba.golden.036
+  sport: nba
+  question: "How many points per game did Kareem Abdul-Jabbar average in the 1971-72 season?"
+  expected_value: "34.8"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar
+  verified_against: wikipedia
+
+# ─── Magic Johnson stats ─────────────────────────────────────────────────────
+
+- fact_id: nba.golden.037
+  sport: nba
+  question: "What is Magic Johnson's career assists per game average?"
+  expected_value: "11.2"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+- fact_id: nba.golden.038
+  sport: nba
+  question: "What is Magic Johnson's career total assists?"
+  expected_value: "10141"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+- fact_id: nba.golden.039
+  sport: nba
+  question: "How many points per game did Magic Johnson average in the 1986-87 season?"
+  expected_value: "23.9"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+- fact_id: nba.golden.040
+  sport: nba
+  question: "How many assists per game did Magic Johnson average in the 1986-87 season?"
+  expected_value: "12.2"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+- fact_id: nba.golden.041
+  sport: nba
+  question: "How many NBA championships did Magic Johnson win with the Lakers?"
+  expected_value: "5"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+- fact_id: nba.golden.042
+  sport: nba
+  question: "How many MVP awards did Magic Johnson win?"
+  expected_value: "3"
+  stat: player_efficiency_rating
+  source_url: https://en.wikipedia.org/wiki/Magic_Johnson
+  verified_against: wikipedia
+
+# ─── LeBron James season stats ───────────────────────────────────────────────
+
+- fact_id: nba.golden.043
+  sport: nba
+  question: "How many points per game did LeBron James average in the 2022-23 season?"
+  expected_value: "28.9"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.044
+  sport: nba
+  question: "How many assists per game did LeBron James average in the 2019-20 season?"
+  expected_value: "10.2"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.045
+  sport: nba
+  question: "How many MVP awards has LeBron James won?"
+  expected_value: "4"
+  stat: player_efficiency_rating
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.046
+  sport: nba
+  question: "How many NBA championships has LeBron James won?"
+  expected_value: "4"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.047
+  sport: nba
+  question: "On what date did LeBron James surpass Kareem Abdul-Jabbar as the NBA's all-time leading scorer?"
+  expected_value: "February 7, 2023"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.048
+  sport: nba
+  question: "What were LeBron James's assists per game in the 2017-18 season?"
+  expected_value: "8.7"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/LeBron_James
+  verified_against: wikipedia
+
+- fact_id: nba.golden.049
+  sport: nba
+  question: "What is Scottie Pippen's assists per game in the 1995-96 season?"
+  expected_value: "5.9"
+  stat: assists
+  source_url: https://en.wikipedia.org/wiki/1995%E2%80%9396_Chicago_Bulls_season
+  verified_against: wikipedia
+
+- fact_id: nba.golden.050
+  sport: nba
+  question: "What is Wilt Chamberlain's career total points?"
+  expected_value: "31419"
+  stat: points
+  source_url: https://en.wikipedia.org/wiki/List_of_NBA_career_scoring_leaders
+  verified_against: wikipedia
