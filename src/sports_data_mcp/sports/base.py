@@ -105,7 +105,7 @@ class BaseSportAdapter(ABC):
         attempted: list[str] = []
         last_result: Any = None
         last_source: str | None = None
-        last_was_error: bool = False
+        got_any_data: bool = False
 
         for source in self.sources:
             attempted.append(source)
@@ -113,7 +113,6 @@ class BaseSportAdapter(ABC):
                 result = self._fetch_from(source, query_type, **kwargs)
             except Exception as exc:
                 logger.warning("Source %r failed for %s: %s", source, query_type, exc)
-                last_was_error = True
                 continue
 
             count = _record_count(result)
@@ -128,21 +127,25 @@ class BaseSportAdapter(ABC):
                     "below_threshold": False,
                 }
 
-            # Below threshold — try next
+            # Below threshold — try next. Only track results that actually carry data
+            # (a source returning None/empty is treated like a failure for fallthrough).
             logger.debug(
                 "Source %r returned %d records (min=%d) — below threshold, trying next.",
                 source,
                 count,
                 min_n,
             )
-            last_result = result
-            last_source = source
-            last_was_error = False
+            if count > 0:
+                last_result = result
+                last_source = source
+                got_any_data = True
 
-        # All sources exhausted
-        if last_was_error and last_result is None:
+        # All sources exhausted. If no source ever produced usable data (every source
+        # either raised or returned nothing), there is nothing to return — raise so the
+        # caller surfaces an error rather than caching/returning an empty best-effort.
+        if not got_any_data:
             raise SourceExhaustedError(
-                f"All sources {self.sources!r} raised errors for {query_type}."
+                f"All sources {self.sources!r} failed to return data for {query_type}."
             )
 
         # Some sources returned thin data — return last result with below_threshold flag

@@ -45,8 +45,6 @@ class SingleFlight:
         If `timeout` is set and we are the worker, the work is not bounded by
         the timeout here; callers impose their own timeouts via this parameter.
         """
-        loop = asyncio.get_event_loop()
-
         if key in self._in_flight:
             # A worker is already running — become a waiter
             fut = self._in_flight[key]
@@ -61,6 +59,7 @@ class SingleFlight:
                 raise
 
         # Become the worker
+        loop = asyncio.get_running_loop()
         fut: asyncio.Future[Any] = loop.create_future()
         self._in_flight[key] = fut
         logger.debug("SingleFlight: starting worker for key %r", key)
@@ -71,6 +70,10 @@ class SingleFlight:
             return result
         except Exception as exc:
             fut.set_exception(exc)
+            # Mark the exception as retrieved so asyncio doesn't log a spurious
+            # "Future exception was never retrieved" warning when there are no
+            # waiters. The worker itself re-raises below, so the error is not lost.
+            fut.exception()
             raise
         finally:
             # Always release the slot so new calls can start a fresh worker

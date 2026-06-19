@@ -17,6 +17,7 @@ from __future__ import annotations
 import asyncio
 import logging
 import random
+import threading
 import time
 from enum import Enum
 
@@ -50,6 +51,9 @@ class RateLimiter:
         self._tokens = self._capacity
         self._last = time.monotonic()
         self._lock = asyncio.Lock()
+        # Separate threading lock guards acquire_sync(), which is called from
+        # blocking-library worker threads (via limit_sync) that share this limiter.
+        self._sync_lock = threading.Lock()
 
     async def acquire(self) -> None:
         async with self._lock:
@@ -67,16 +71,20 @@ class RateLimiter:
 
     # Sync version for wrapping blocking library calls
     def acquire_sync(self) -> None:
-        now = time.monotonic()
-        elapsed = now - self._last
-        self._last = now
-        self._tokens = min(self._capacity, self._tokens + elapsed * self._rate)
-        if self._tokens >= 1.0:
-            self._tokens -= 1.0
-            return
-        wait = (1.0 - self._tokens) / self._rate
-        self._tokens = 0.0
-        time.sleep(wait)
+        with self._sync_lock:
+            now = time.monotonic()
+            elapsed = now - self._last
+            self._last = now
+            self._tokens = min(self._capacity, self._tokens + elapsed * self._rate)
+            if self._tokens >= 1.0:
+                self._tokens -= 1.0
+                return
+            # Need to wait for a token. Hold the lock across the sleep so other
+            # threads observe the depleted bucket and serialize behind us, rather
+            # than all computing the same short wait and admitting simultaneously.
+            wait = (1.0 - self._tokens) / self._rate
+            self._tokens = 0.0
+            time.sleep(wait)
 
 
 # ---------------------------------------------------------------------------
