@@ -8,35 +8,11 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-import sports_data_mcp.cache
 from sports_data_mcp.cache import Cache
 from sports_data_mcp.names.resolver import NameResolver
 from sports_data_mcp.stats.resolver import StatResolver
 
 logger = logging.getLogger(__name__)
-
-
-# Monkey-patch cache._is_meaningful to support checking serialized CanonicalResult dicts
-_orig_is_meaningful = sports_data_mcp.cache._is_meaningful
-
-
-def _patched_is_meaningful(query_type: str, result: Any) -> bool:
-    if isinstance(result, dict) and "sport" in result and "query_type" in result:
-        core = result.get("core", {})
-        if query_type in ("player_game_log", "team_game_log"):
-            games = core.get("games")
-            return isinstance(games, list) and len(games) > 0
-        if query_type == "league_leaders":
-            leaders = core.get("leaders")
-            return isinstance(leaders, list) and len(leaders) > 0
-        if query_type == "team_history":
-            return isinstance(core, dict) and len(core) > 0
-        if query_type in ("player_stats", "team_stats"):
-            return any(isinstance(v, (int, float)) for v in core.values())
-    return _orig_is_meaningful(query_type, result)
-
-
-sports_data_mcp.cache._is_meaningful = _patched_is_meaningful
 
 
 class StructuredDispatcher:

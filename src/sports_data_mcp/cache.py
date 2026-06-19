@@ -38,9 +38,37 @@ CREATE TABLE IF NOT EXISTS cache (
 # ---------------------------------------------------------------------------
 
 def _is_meaningful(query_type: str, result: Any) -> bool:
-    """Return True if result contains enough data to be worth caching."""
+    """Return True if result contains enough data to be worth caching.
+
+    Accepts either a raw adapter result (dict/list) or a serialized
+    ``CanonicalResult`` wrapper (``{"sport", "query_type", "core", ...}``). When
+    handed the wrapper, the meaningfulness check is applied to its ``core``
+    payload, since that holds the actual stats/records (§4.7). This keeps the
+    predicate in cache.py rather than monkey-patching it from the dispatcher.
+    """
     if result is None:
         return False
+    # Serialized CanonicalResult wrapper → inspect its core payload.
+    if (
+        isinstance(result, dict)
+        and "core" in result
+        and "sport" in result
+        and "query_type" in result
+    ):
+        core = result.get("core")
+        if query_type in ("player_game_log", "team_game_log"):
+            games = core.get("games") if isinstance(core, dict) else None
+            return isinstance(games, list) and len(games) > 0
+        if query_type == "league_leaders":
+            leaders = core.get("leaders") if isinstance(core, dict) else None
+            return isinstance(leaders, list) and len(leaders) > 0
+        if query_type == "team_history":
+            return isinstance(core, dict) and len(core) > 0
+        if query_type in ("player_stats", "team_stats"):
+            return isinstance(core, dict) and any(
+                isinstance(v, (int, float)) for v in core.values()
+            )
+        return isinstance(core, (dict, list)) and len(core) > 0
     if query_type in ("player_stats", "team_stats"):
         if isinstance(result, dict):
             return any(isinstance(v, (int, float)) for v in result.values())
