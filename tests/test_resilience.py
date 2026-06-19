@@ -11,10 +11,14 @@ import unittest.mock as mock
 import pytest
 
 from sports_data_mcp.resilience import (
+    _DEFAULT_RPM_API,
+    _DEFAULT_RPM_SCRAPED,
     BreakerState,
     CircuitBreaker,
     CircuitOpenError,
+    HostResilience,
     RateLimiter,
+    _is_scraped_host,
     retry_with_backoff,
 )
 
@@ -161,3 +165,37 @@ async def test_retry_updates_breaker_on_success():
     await retry_with_backoff(ok, max_attempts=1, base_delay=0.01, breaker=cb)
     assert cb.state == BreakerState.CLOSED
     assert cb._failures == 0
+
+
+# ---------------------------------------------------------------------------
+# Scraped-host classification (§2.1) — www./subdomain forms must stay polite-rate
+# ---------------------------------------------------------------------------
+
+
+@pytest.mark.parametrize(
+    "host",
+    [
+        "basketball-reference.com",
+        "www.basketball-reference.com",  # the form get_client derives from the NBA fallback URL
+        "baseball-reference.com",
+        "sports-reference.com",
+        "WWW.Basketball-Reference.COM",  # case-insensitive
+    ],
+)
+def test_scraped_hosts_get_polite_rate(host):
+    assert _is_scraped_host(host) is True
+    assert HostResilience(host).limiter._rate * 60 == _DEFAULT_RPM_SCRAPED
+
+
+@pytest.mark.parametrize(
+    "host",
+    ["stats.nba.com", "statsapi.mlb.com", "site.api.espn.com"],
+)
+def test_api_hosts_get_api_rate(host):
+    assert _is_scraped_host(host) is False
+    assert HostResilience(host).limiter._rate * 60 == _DEFAULT_RPM_API
+
+
+def test_lookalike_host_not_misclassified_as_scraped():
+    # An attacker-style suffix that merely contains the domain must not match.
+    assert _is_scraped_host("basketball-reference.com.evil.example") is False
