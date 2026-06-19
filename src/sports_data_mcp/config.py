@@ -46,6 +46,12 @@ class Config(BaseModel):
             f"transport={self.transport!r}, gemini_api_key={masked})"
         )
 
+    # Pydantic v2 generates __str__ independently of __repr__; without this
+    # override, str()/f-strings/print() render every field — including
+    # gemini_api_key in cleartext — leaking the key (§4.3.b).
+    def __str__(self) -> str:
+        return self.__repr__()
+
     @field_validator("log_level")
     @classmethod
     def _validate_log_level(cls, v: str) -> str:
