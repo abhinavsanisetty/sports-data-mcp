@@ -1,0 +1,28 @@
+interactions:
+- request:
+    body: '{"contents":[{"parts":[{"text":"You are a sports entity resolver. Given
+      a name, return the canonical full name.\n\nSport: nba\nInput: <entity_name>lebron
+      james</entity_name>\n\nRespond with JSON only (no markdown, no extra text):\n{\n  \"canonical_name\":
+      \"<full official name>\",\n  \"entity_type\": \"player\" or \"team\",\n  \"alternatives\":
+      [\"<other plausible match if ambiguous>\"]\n}\n\nIf the name could refer to
+      multiple entities, list all in alternatives."}],"role":"user"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Host:
+      - generativelanguage.googleapis.com
+      User-Agent:
+      - Python-urllib/3.12
+    method: POST
+    uri: https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent
+  response:
+    body:
+      string: '{"candidates":[{"content":{"parts":[{"text":"{\"canonical_name\":\"LeBron
+        James\",\"entity_type\":\"player\",\"alternatives\":[]}"}],"role":"model"},"finishReason":"STOP","index":0}],"usageMetadata":{"promptTokenCount":140,"candidatesTokenCount":14,"totalTokenCount":154},"modelVersion":"gemini-2.0-flash"}'
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+version: 1
