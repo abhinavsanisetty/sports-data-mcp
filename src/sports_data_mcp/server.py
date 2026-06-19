@@ -58,6 +58,12 @@ def _bootstrap() -> None:
     )
     _name_resolver = NameResolver(_cache, api_key=_config.gemini_api_key, model=_config.model)
     _stat_resolver = StatResolver(api_key=_config.gemini_api_key, model=_config.model)
+
+    from sports_data_mcp.sports.mlb import MLBAdapter
+    from sports_data_mcp.sports.nba import NBAAdapter
+    register_adapter("nba", NBAAdapter())
+    register_adapter("mlb", MLBAdapter())
+
     _bootstrapped = True
 
 
