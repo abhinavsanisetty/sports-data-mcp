@@ -1,0 +1,349 @@
+# serializer version: 1
+# name: test_get_league_leaders_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'leaders': list([
+        dict({
+          'player_name': 'Jayson Tatum',
+          'rank': 1,
+          'team': 'BOS',
+          'value': 2225.0,
+        }),
+        dict({
+          'player_name': 'Joel Embiid',
+          'rank': 2,
+          'team': 'PHI',
+          'value': 2183.0,
+        }),
+        dict({
+          'player_name': 'Luka Dončić',
+          'rank': 3,
+          'team': 'DAL',
+          'value': 2138.0,
+        }),
+        dict({
+          'player_name': 'Shai Gilgeous-Alexander',
+          'rank': 4,
+          'team': 'OKC',
+          'value': 2135.0,
+        }),
+        dict({
+          'player_name': 'Giannis Antetokounmpo',
+          'rank': 5,
+          'team': 'MIL',
+          'value': 1959.0,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': 'league',
+      'entity_type': 'team',
+      'name': 'NBA League',
+      'sport': 'nba',
+    }),
+    'query_type': 'league_leaders',
+    'season': '2022-23',
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_player_game_log_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'games': list([
+        dict({
+          'assists': 6,
+          'blocks': 0,
+          'date': 'Apr 13, 2016',
+          'game_id': '0021501227',
+          'minutes': '30',
+          'opponent': 'GSW vs. MEM',
+          'points': 46,
+          'rebounds': 4,
+          'steals': 2,
+        }),
+        dict({
+          'assists': 5,
+          'blocks': 0,
+          'date': 'Apr 10, 2016',
+          'game_id': '0021501201',
+          'minutes': '35',
+          'opponent': 'GSW @ SAS',
+          'points': 37,
+          'rebounds': 5,
+          'steals': 2,
+        }),
+        dict({
+          'assists': 8,
+          'blocks': 0,
+          'date': 'Apr 09, 2016',
+          'game_id': '0021501190',
+          'minutes': '34',
+          'opponent': 'GSW @ MEM',
+          'points': 17,
+          'rebounds': 9,
+          'steals': 1,
+        }),
+        dict({
+          'assists': 9,
+          'blocks': 0,
+          'date': 'Apr 07, 2016',
+          'game_id': '0021501177',
+          'minutes': '36',
+          'opponent': 'GSW vs. SAS',
+          'points': 27,
+          'rebounds': 5,
+          'steals': 2,
+        }),
+        dict({
+          'assists': 15,
+          'blocks': 0,
+          'date': 'Apr 05, 2016',
+          'game_id': '0021501163',
+          'minutes': '43',
+          'opponent': 'GSW vs. MIN',
+          'points': 21,
+          'rebounds': 6,
+          'steals': 3,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': '201939',
+      'entity_type': 'player',
+      'name': 'Stephen Curry',
+      'sport': 'nba',
+    }),
+    'query_type': 'player_game_log',
+    'season': '2015-16',
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_player_stats_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'assists': 551.0,
+      'blocks': 67.0,
+      'games_played': 76,
+      'points': 2036.0,
+      'rebounds': 610.0,
+      'steals': 129.0,
+    }),
+    'entity': dict({
+      'canonical_id': '2544',
+      'entity_type': 'player',
+      'name': 'LeBron James',
+      'sport': 'nba',
+    }),
+    'query_type': 'player_stats',
+    'season': '2012-13',
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_game_log_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'games': list([
+        dict({
+          'assists': 17,
+          'date': 'APR 21, 1996',
+          'game_id': '0029501188',
+          'opponent': 'CHI @ WAS',
+          'outcome': 'W',
+          'points': 103,
+          'rebounds': 46,
+        }),
+        dict({
+          'assists': 27,
+          'date': 'APR 20, 1996',
+          'game_id': '0029501175',
+          'opponent': 'CHI vs. IND',
+          'outcome': 'L',
+          'points': 99,
+          'rebounds': 48,
+        }),
+        dict({
+          'assists': 28,
+          'date': 'APR 18, 1996',
+          'game_id': '0029501158',
+          'opponent': 'CHI vs. DET',
+          'outcome': 'W',
+          'points': 110,
+          'rebounds': 53,
+        }),
+        dict({
+          'assists': 21,
+          'date': 'APR 16, 1996',
+          'game_id': '0029501144',
+          'opponent': 'CHI @ MIL',
+          'outcome': 'W',
+          'points': 86,
+          'rebounds': 52,
+        }),
+        dict({
+          'assists': 26,
+          'date': 'APR 14, 1996',
+          'game_id': '0029501134',
+          'opponent': 'CHI @ CLE',
+          'outcome': 'W',
+          'points': 98,
+          'rebounds': 42,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': '1610612741',
+      'entity_type': 'team',
+      'name': 'Chicago Bulls',
+      'sport': 'nba',
+    }),
+    'query_type': 'team_game_log',
+    'season': '1995-96',
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_history_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'abbreviation': 'LAL',
+      'championship_count': 17,
+      'championship_years': list([
+        1949,
+        1950,
+        1952,
+        1953,
+        1954,
+        1972,
+        1980,
+        1982,
+        1985,
+        1987,
+        1988,
+        2000,
+        2001,
+        2002,
+        2009,
+        2010,
+        2020,
+      ]),
+      'city': 'Los Angeles',
+      'nickname': 'Lakers',
+      'state': '',
+      'year_founded': 1948,
+    }),
+    'entity': dict({
+      'canonical_id': '1610612747',
+      'entity_type': 'team',
+      'name': 'Los Angeles Lakers',
+      'sport': 'nba',
+    }),
+    'query_type': 'team_history',
+    'season': None,
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_stats_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'nba_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'nba_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'assists': 2373.0,
+      'games_played': 82,
+      'losses': 9,
+      'points': 9421.0,
+      'rebounds': 3788.0,
+      'win_pct': 0.89,
+      'wins': 73,
+    }),
+    'entity': dict({
+      'canonical_id': '1610612744',
+      'entity_type': 'team',
+      'name': 'Golden State Warriors',
+      'sport': 'nba',
+    }),
+    'query_type': 'team_stats',
+    'season': '2015-16',
+    'sport': 'nba',
+    'sport_specific': dict({
+    }),
+  })
+# ---

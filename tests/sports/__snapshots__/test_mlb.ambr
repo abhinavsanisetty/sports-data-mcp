@@ -1,0 +1,347 @@
+# serializer version: 1
+# name: test_get_league_leaders_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'pybaseball',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'leaders': list([
+        dict({
+          'player_name': 'Khris Davis',
+          'rank': 1,
+          'team': 'Oakland',
+          'value': 48.0,
+        }),
+        dict({
+          'player_name': 'J.D. Martinez',
+          'rank': 2,
+          'team': 'Boston',
+          'value': 43.0,
+        }),
+        dict({
+          'player_name': 'Joey Gallo',
+          'rank': 3,
+          'team': 'Texas',
+          'value': 40.0,
+        }),
+        dict({
+          'player_name': 'Jos\\xc3\\xa9 Ram\\xc3\\xadrez',
+          'rank': 4,
+          'team': 'Cleveland',
+          'value': 39.0,
+        }),
+        dict({
+          'player_name': 'Mike Trout',
+          'rank': 5,
+          'team': 'Los Angeles',
+          'value': 39.0,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': 'league',
+      'entity_type': 'team',
+      'name': 'MLB League',
+      'sport': 'mlb',
+    }),
+    'query_type': 'league_leaders',
+    'season': '2018',
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_player_game_log_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+        'mlb_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'mlb_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'games': list([
+        dict({
+          'date': '2023-03-30',
+          'game_id': '718769',
+          'hits': 1,
+          'home_runs': 0,
+          'opponent': 'Oakland Athletics',
+          'outcome': 'L',
+          'rbi': 0,
+        }),
+        dict({
+          'date': '2023-04-01',
+          'game_id': '718757',
+          'hits': 2,
+          'home_runs': 0,
+          'opponent': 'Oakland Athletics',
+          'outcome': 'W',
+          'rbi': 2,
+        }),
+        dict({
+          'date': '2023-04-02',
+          'game_id': '718734',
+          'hits': 1,
+          'home_runs': 1,
+          'opponent': 'Oakland Athletics',
+          'outcome': 'W',
+          'rbi': 1,
+        }),
+        dict({
+          'date': '2023-04-03',
+          'game_id': '718720',
+          'hits': 1,
+          'home_runs': 1,
+          'opponent': 'Seattle Mariners',
+          'outcome': 'W',
+          'rbi': 2,
+        }),
+        dict({
+          'date': '2023-04-04',
+          'game_id': '718706',
+          'hits': 0,
+          'home_runs': 0,
+          'opponent': 'Seattle Mariners',
+          'outcome': 'L',
+          'rbi': 0,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': '660271',
+      'entity_type': 'player',
+      'name': 'Shohei Ohtani',
+      'sport': 'mlb',
+    }),
+    'query_type': 'player_game_log',
+    'season': '2023',
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_player_stats_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'pybaseball',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'at_bats': 471,
+      'batting_avg': 0.312,
+      'games_played': 140,
+      'hits': 147,
+      'home_runs': 39,
+      'on_base_pct': 0.46,
+      'ops': 1.088,
+      'rbi': 79,
+      'runs': 101,
+      'slugging_pct': 0.628,
+    }),
+    'entity': dict({
+      'canonical_id': '545361',
+      'entity_type': 'player',
+      'name': 'Mike Trout',
+      'sport': 'mlb',
+    }),
+    'query_type': 'player_stats',
+    'season': '2018',
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_game_log_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'pybaseball',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'games': list([
+        dict({
+          'date': 'Monday, Apr 3',
+          'game_id': 'HOU_2017_1',
+          'opponent': 'SEA',
+          'outcome': 'W',
+          'runs_allowed': 0,
+          'runs_scored': 0,
+        }),
+        dict({
+          'date': 'Tuesday, Apr 4',
+          'game_id': 'HOU_2017_2',
+          'opponent': 'SEA',
+          'outcome': 'W',
+          'runs_allowed': 0,
+          'runs_scored': 0,
+        }),
+        dict({
+          'date': 'Wednesday, Apr 5',
+          'game_id': 'HOU_2017_3',
+          'opponent': 'SEA',
+          'outcome': 'W',
+          'runs_allowed': 0,
+          'runs_scored': 0,
+        }),
+        dict({
+          'date': 'Thursday, Apr 6',
+          'game_id': 'HOU_2017_4',
+          'opponent': 'SEA',
+          'outcome': 'L',
+          'runs_allowed': 0,
+          'runs_scored': 0,
+        }),
+        dict({
+          'date': 'Friday, Apr 7',
+          'game_id': 'HOU_2017_5',
+          'opponent': 'KCR',
+          'outcome': 'L',
+          'runs_allowed': 0,
+          'runs_scored': 0,
+        }),
+      ]),
+    }),
+    'entity': dict({
+      'canonical_id': '117',
+      'entity_type': 'team',
+      'name': 'Houston Astros',
+      'sport': 'mlb',
+    }),
+    'query_type': 'team_game_log',
+    'season': '2017',
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_history_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+        'mlb_api',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'mlb_api',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'abbreviation': 'NYY',
+      'championship_count': 27,
+      'championship_years': list([
+        1923,
+        1927,
+        1928,
+        1932,
+        1936,
+        1937,
+        1938,
+        1939,
+        1941,
+        1943,
+        1947,
+        1949,
+        1950,
+        1951,
+        1952,
+        1953,
+        1956,
+        1958,
+        1961,
+        1962,
+        1977,
+        1978,
+        1996,
+        1998,
+        1999,
+        2000,
+        2009,
+      ]),
+      'city': 'Bronx',
+      'nickname': 'Yankees',
+      'state': '',
+      'year_founded': 1903,
+    }),
+    'entity': dict({
+      'canonical_id': '147',
+      'entity_type': 'team',
+      'name': 'New York Yankees',
+      'sport': 'mlb',
+    }),
+    'query_type': 'team_history',
+    'season': None,
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---
+# name: test_get_team_stats_happy
+  dict({
+    '_meta': dict({
+      'attempted_sources': list([
+        'pybaseball',
+      ]),
+      'below_threshold': False,
+      'cache_status': 'miss',
+      'fetched_at': 1781843534,
+      'latency_ms': 10,
+      'source': 'pybaseball',
+      'total_available': None,
+      'truncated': False,
+    }),
+    'core': dict({
+      'games_played': 162,
+      'losses': 54,
+      'win_pct': 0.667,
+      'wins': 108,
+    }),
+    'entity': dict({
+      'canonical_id': '111',
+      'entity_type': 'team',
+      'name': 'Boston Red Sox',
+      'sport': 'mlb',
+    }),
+    'query_type': 'team_stats',
+    'season': '2018',
+    'sport': 'mlb',
+    'sport_specific': dict({
+    }),
+  })
+# ---

@@ -210,11 +210,24 @@ _DEFAULT_RPM_SCRAPED = 12  # 1 req / 5 sec — polite scraping
 _DEFAULT_RPM_API = 60  # 1 req / sec for official APIs
 
 
+def _is_scraped_host(host: str) -> bool:
+    """Match a host against the polite-scraping set, tolerant of subdomains.
+
+    ``get_client`` derives the host from a URL's netloc, so the same site can
+    appear as both ``basketball-reference.com`` and ``www.basketball-reference.com``.
+    A bare set-membership check mis-classifies the ``www.`` form as an API and
+    applies the 5x-faster API rate — risking the exact IP ban §2.1 guards against.
+    Matching by registrable-domain suffix keeps every form on the polite rate.
+    """
+    host = host.lower()
+    return any(host == s or host.endswith("." + s) for s in _SCRAPED_HOSTS)
+
+
 class HostResilience:
     """Container for a host's rate limiter + circuit breaker."""
 
     def __init__(self, host: str, rpm: int | None = None) -> None:
-        default_rpm = _DEFAULT_RPM_SCRAPED if host in _SCRAPED_HOSTS else _DEFAULT_RPM_API
+        default_rpm = _DEFAULT_RPM_SCRAPED if _is_scraped_host(host) else _DEFAULT_RPM_API
         self.limiter = RateLimiter(rpm=rpm if rpm is not None else default_rpm)
         self.breaker = CircuitBreaker()
 

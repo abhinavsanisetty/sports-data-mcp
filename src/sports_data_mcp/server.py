@@ -34,6 +34,39 @@ def register_adapter(sport: str, adapter: Any) -> None:
     _ADAPTER_REGISTRY[sport] = adapter
 
 
+_config: Any = None
+_cache: Any = None
+_name_resolver: Any = None
+_stat_resolver: Any = None
+_bootstrapped = False
+
+
+def _bootstrap() -> None:
+    global _config, _cache, _name_resolver, _stat_resolver, _bootstrapped
+    if _bootstrapped:
+        return
+    from sports_data_mcp.cache import Cache
+    from sports_data_mcp.config import load_config
+    from sports_data_mcp.names.resolver import NameResolver
+    from sports_data_mcp.stats.resolver import StatResolver
+
+    _config = load_config()
+    _cache = Cache(
+        db_path=_config.cache_path,
+        cache_version=_config.cache_version,
+        wal_mode=(_config.transport == "http"),
+    )
+    _name_resolver = NameResolver(_cache, api_key=_config.gemini_api_key, model=_config.model)
+    _stat_resolver = StatResolver(api_key=_config.gemini_api_key, model=_config.model)
+
+    from sports_data_mcp.sports.mlb import MLBAdapter
+    from sports_data_mcp.sports.nba import NBAAdapter
+    register_adapter("nba", NBAAdapter())
+    register_adapter("mlb", MLBAdapter())
+
+    _bootstrapped = True
+
+
 # ---------------------------------------------------------------------------
 # Tool handlers
 # ---------------------------------------------------------------------------
@@ -62,9 +95,12 @@ def _dispatch(tool: str, args: dict) -> dict:
     sport = args.get("sport")
     if sport and sport in _ADAPTER_REGISTRY:
         adapter = _ADAPTER_REGISTRY[sport]
-        return adapter.call(tool, args)
+        from sports_data_mcp.tools.structured import StructuredDispatcher
+        dispatcher = StructuredDispatcher(adapter, _cache, _name_resolver, _stat_resolver)
+        return dispatcher.call(tool, args)
 
     return _handle_not_implemented(tool, args)
+
 
 
 # ---------------------------------------------------------------------------
@@ -82,6 +118,7 @@ class SportsServer:
 
     def call_tool(self, tool_name: str, args: dict) -> dict:
         """Validate args and dispatch; return a result dict."""
+        _bootstrap()
         if tool_name not in TOOL_ARGS_MAP:
             return {
                 "status": "error",

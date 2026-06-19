@@ -23,9 +23,14 @@ _VALID_TRANSPORTS = {"stdio", "http"}
 
 
 class Config(BaseModel):
-    """Immutable runtime config loaded from environment variables."""
+    """Immutable runtime config loaded from environment variables.
 
-    gemini_api_key: str
+    ``gemini_api_key`` is optional: the server must be able to start and serve
+    structured tools when the agent supplies already-canonical names (§2.2).
+    Name/stat resolution and the NL tool degrade gracefully when it is absent.
+    """
+
+    gemini_api_key: str | None = None
     model: str = _DEFAULT_MODEL
     eval_generator_model: str = _DEFAULT_MODEL
     cache_path: Path = Field(default=_DEFAULT_CACHE_PATH)
@@ -111,9 +116,13 @@ def load_config() -> Config:
     """Load and validate config from environment. Raises ValueError with clear messages."""
     api_key = _env("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError(
-            "GEMINI_API_KEY is required. Get a free key at https://ai.google.dev "
-            "(takes ~30 seconds, 1500 req/day free tier)."
+        # Not fatal: structured tools still work when the agent supplies
+        # canonical names (§2.2). Name/stat resolution and the NL tool degrade
+        # gracefully (returning an "ambiguous"/"unknown" hint) without a key.
+        logger.warning(
+            "GEMINI_API_KEY is not set. Name/stat resolution and the NL tool "
+            "will be disabled; structured tools require canonical names. "
+            "Get a free key at https://ai.google.dev (1500 req/day free tier)."
         )
 
     raw_cache = _env("SPORTS_MCP_CACHE_PATH")

@@ -1,0 +1,77 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate, br, zstd
+      connection:
+      - keep-alive
+      host:
+      - statsapi.mlb.com
+      user-agent:
+      - sports-data-mcp/0.1 (+https://github.com/sports-data-mcp/sports-data-mcp)
+    method: GET
+    uri: https://statsapi.mlb.com/api/v1/teams/147
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAA/4RTwYrbMBD9lUHnENtxt6W5bZbSS+IulBZM6WFiT2w1tmQk2ZsQ8u8dKYk3i1n2
+        IDDz3rz3ZiSfRKG7o5FV7cRSPN2+YREvPsNmvYLHckBVUAkbKiXOYD1/ngP8sgR6B6iOUGjlSDnQ
+        ClwtLXRYEWCxV/qlobIiC1gZotZznGYOgSPTMlFbx7o1GYLauW4ZRVV5mLfNdl7oNuLTacVdNhoj
+        zt3BiZlwhK0Vyz8nYTsjVbUmrHoSy5OQpVgmycNMKGy5IL4b7GhneungSpqJRqo9QxF2MhqSqAn1
+        iLsYw+3W0CDRSa18+1qcudg0Px0aPq5nW5ExMRh9+jIaZfQCuTZ7yFHtiezUJ4SOuIchS2i9gd/y
+        TAykXtOnaZKOqhcxYOdS9u1UM3TayPf4oJdt/L6XWzws0vfaPObbfLInXXpDdUR22cmGxsJxupYs
+        z6+3kN3nDEPrIrCuwMpodQiKxrqc0PzYPTd4ZCT5Gqee//bq4tfZH1syskD14cXFYYhSDtKGeNfB
+        4+Q9KfiG1k31bgq8mDi5rFMbN0ab8APMNypGnw3+0+ZmskJLW346Qalm6nUlWX73RnaGfy7+ayh7
+        +4wYKpp+O1kvFk4OXHKmp/Pf838AAAD//wMAM0AlA74DAAA=
+    headers:
+      accept-ranges:
+      - bytes
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+      access-control-allow-methods:
+      - GET, POST, PUT, DELETE, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Type,X-Requested-With,accept,Origin,Access-Control-Request-Method,Access-Control-Request-Headers,Authorization
+      age:
+      - '3'
+      cache-control:
+      - max-age=60, public, stale-while-revalidate=30, stale-if-error=86400
+      connection:
+      - keep-alive
+      content-encoding:
+      - gzip
+      content-length:
+      - '491'
+      content-type:
+      - application/json;charset=UTF-8
+      date:
+      - Fri, 19 Jun 2026 04:37:59 GMT
+      vary:
+      - accept-encoding, Accept-Encoding
+      via:
+      - 1.1 google, 1.1 varnish, 1.1 varnish
+      x-cache:
+      - HIT, MISS
+      x-cache-hits:
+      - 1, 0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - DENY
+      x-served-by:
+      - cache-chi-klot8100091-CHI, cache-lax-kwhp1940065-LAX
+      x-timer:
+      - S1781843880.736928,VS0,VE65
+      x-xss-protection:
+      - '0'
+    status:
+      code: 200
+      message: OK
+version: 1

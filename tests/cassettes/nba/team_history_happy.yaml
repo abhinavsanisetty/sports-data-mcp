@@ -1,0 +1,119 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json, text/plain, */*
+      Accept-Encoding:
+      - gzip, deflate, br
+      Accept-Language:
+      - en-US,en;q=0.5
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Cookie:
+      - bm_ss=ab8e18ef4e; bm_s=YAAQ09fOF09Y0MyeAQAABggk3gX7MSs4KQijVfovOL3gLzBQnwF3VjC6T+Uz6vglyuTx5BOVz95ZfTiRVxFF1nV9CjNOhGcNj4cKRbiUpGPGI6MKiezxQkim7W3ud6S+M7STrJcOWChjBc0WVDL1uKaaoyWLMWv3rUAtIlciFkhqsqnSakN6rhLkNjM//SBCMx+JcO+CVwyUZGRSLu4+qOlgk/+sArn1tQhnvoNbyz/Ya7OtoACnulmPyVNOFtqBNHzv0HocKNjf3lPo0BtTgVe2iKhmJxXXW9357cqdyVJbbwf/9e+fV1NSV1DfIVQV6KrejEIWNtcoxBbK2NbFr+fDYHvjxAZw5ZH7bCz+ezqqjiQqOPGudx1tDRgp6qWr/awZD4waRdVQnOtAH1TttkgQke9m4du3pDBzHDva8qmKpapVGdL1l4tgzhJBDeUV5F1+vCRZkQ9O2xGvATQ7pS5Hw2dDrCYCg20GqmzjeJoNt+Xkc1jkkskCI1+NIUDCRbvVtS9IHSw4oP83kba7RjCX9Wyt5ADpSIDo3u/rl/u25sgtf3Qjwv7bgVV1CNuejKerSSMltQduDKfA06fTlOTDnRNuQqqI+hkQR/ZlRxb9TxcfDJbtqI6l1+augeQxh445AHJbaw8j+4Ww1csHOfySZhp1OBRV3dgxNqoUWLqmdgH49CV0l9Q+zDbH3OkQ8d3Hhj13q41akoyQ6OlxVoMEemJ5MrfhYNEREt9R6+UTcViaHO5l6hRauUBydbVZ8WlWStMBkqXGK4BgPR5Lhz5LygHMrWso85zHTfRE4UZ8UHZ/Ie5N97JW7dKRWOhZGFZFnkYQTyumuLtNBKJ77gH6JNr8dwKv30noNSeEvP4PybO2MiEM6gp33RhzWO+eneQVejhi9fTA;
+        bm_so=39442142476DBA119E0B215F507A627948D4F34AF80CDD2A4E0868A21C1B27EC~YAAQ4dfOF6YtyrOeAQAAkfAj3gigliSEqHLfLn7JXVkeR9G06Sru5hrMWahqb5EYpUJdwRYd8uKznZEU5RgvGQUPRjVFP2JQ2spQxBPZE5pkde2uRIGsTJb0bCZ3guRlhRz9B8OLibob3GCZ1h4Rjwm/QrwqEJmmFzELQsjNuAkyw7+0xQlY/PlRoj6hEZo4XOg2nd3JQz9e2TdOSv+s+qVYGROm3fvdYunRiHYr+TLB+3tn84QLp0nfTkAZ19lti3XJz6cEVgVha7fs02U6woa0DlaKfhyF2PxRsSBDo7tHPly2nsfR2yMm/fKezK7zqUjUMtVVWu2RKtVI+Jl6i0AOekHbyzj9+pEz1YGHPdKXyrNJzp7OqMEMerK8FmKDEHPJY5TrV7cEPCTKbS2EQB0QFINFvVrPxEfytMUqkr8Uoro7W9UFQGJJPn4eT2Kmmt+hsYXffb8jCo/1qIgY
+      Host:
+      - stats.nba.com
+      Pragma:
+      - no-cache
+      Referer:
+      - https://www.nba.com/
+      Sec-Ch-Ua:
+      - '"Not:A-Brand";v="99", "Google Chrome";v="145", "Chromium";v="145"'
+      Sec-Ch-Ua-Mobile:
+      - ?0
+      Sec-Fetch-Dest:
+      - empty
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
+        like Gecko) Chrome/145.0.0.0 Safari/537.36
+    method: GET
+    uri: https://stats.nba.com/stats/teamdetails?TeamID=1610612747
+  response:
+    body:
+      string: '{"resource":"teamdetails","parameters":{"TeamID":1610612747},"resultSets":[{"name":"TeamBackground","headers":["TEAM_ID","ABBREVIATION","NICKNAME","YEARFOUNDED","CITY","ARENA","ARENACAPACITY","OWNER","GENERALMANAGER","HEADCOACH","DLEAGUEAFFILIATION"],"rowSet":[[1610612747,"LAL","Lakers",1948,"Los
+        Angeles","Crypto.com Arena","19060","Mark Walter & Jeanie Buss","Rob Pelinka","JJ
+        Redick","South Bay Lakers"]]},{"name":"TeamHistory","headers":["TEAM_ID","CITY","NICKNAME","YEARFOUNDED","YEARACTIVETILL"],"rowSet":[[1610612747,"Los
+        Angeles","Lakers",1960,2023],[1610612747,"Minneapolis","Lakers",1948,1959]]},{"name":"TeamSocialSites","headers":["ACCOUNTTYPE","WEBSITE_LINK"],"rowSet":[["Facebook","https://www.facebook.com/losangeleslakers"],["Instagram","https://instagram.com/lakers"],["Twitter","https://twitter.com/Lakers"]]},{"name":"TeamAwardsChampionships","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[1949,"Washington
+        Capitols"],[1950,"Syracuse Nationals (76ers)"],[1952,"New York Knicks"],[1953,"New
+        York Knicks"],[1954,"Syracuse Nationals (76ers)"],[1972,"New York Knicks"],[1980,"Philadelphia
+        76ers"],[1982,"Philadelphia 76ers"],[1985,"Boston Celtics"],[1987,"Boston
+        Celtics"],[1988,"Detroit Pistons"],[2000,"Indiana Pacers"],[2001,"Philadelphia
+        76ers"],[2002,"New Jersey Nets"],[2009,"Orlando Magic"],[2010,"Boston Celtics"],[2020,"Miami
+        Heat"]]},{"name":"TeamAwardsConf","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[1972,null],[1973,null],[1980,null],[1982,null],[1983,null],[1984,null],[1985,null],[1987,null],[1988,null],[1989,null],[1991,null],[2000,null],[2001,null],[2002,null],[2004,null],[2008,null],[2009,null],[2010,null],[2020,null]]},{"name":"TeamAwardsDiv","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[[1950,null],[1951,null],[1953,null],[1954,null],[1962,null],[1963,null],[1965,null],[1966,null],[1969,null],[1971,null],[1972,null],[1973,null],[1974,null],[1977,null],[1980,null],[1982,null],[1983,null],[1984,null],[1985,null],[1986,null],[1987,null],[1988,null],[1989,null],[1990,null],[2000,null],[2001,null],[2004,null],[2008,null],[2009,null],[2010,null],[2011,null],[2012,null],[2020,null],[2025,null],[2026,null]]},{"name":"TeamHof","headers":["PLAYERID","PLAYER","POSITION","JERSEY","SEASONSWITHTEAM","YEAR"],"rowSet":[[2546,"Carmelo
+        Anthony","F",null,"2021",2025],[2730,"Dwight Howard","C",null,"2013, 2020,
+        2022",2025],[2200,"Pau Gasol","F-C",null,"2007-2014",2023],[77074,"Lou Hudson","G-F",null,"1978-1979",2022],[977,"Kobe
+        Bryant","G",null,"1997-2016",2020],[124,"Vlade Divac","C",null,"1990-1996,
+        2005",2019],[78097,"Charlie Scott","G",null,"1978",2018],[959,"Steve Nash","G",null,"2012-2014",2018],[406,"Shaquille
+        O''Neal","C",null,"1997-2004",2016],[76133,"Zelmo Beaty","C",null,"1975",2016],[76981,"Spencer
+        Haywood","F",null,"1980",2015],[77371,"Bobby \"Slick\" Leonard","G",null,"1957-1961",2014],[782,"Mitch
+        Richmond","G",null,"2002",2014],[56,"Gary Payton","G",null,"2004",2013],[78532,"Jamaal
+        Wilkes","F",null,"1978-1985",2012],[23,"Dennis Rodman","F",null,"1999",2011],[252,"Karl
+        Malone","F",null,"2004",2010],[76504,"Adrian Dantley","F",null,"1978-1979",2008],[1460,"James
+        Worthy","F",null,"1983-1994",2003],[77142,"Magic Johnson","G",null,"1980-1991,
+        1996",2002],[77498,"Bob McAdoo","C-F",null,"1982-1985",2000],[76832,"Gail
+        Goodrich","G",null,"1966-1968, 1971-1976",1996],[76003,"Kareem Abdul-Jabbar","C",null,"1976-1989",1995],[77593,"Vern
+        Mikkelsen","F",null,"1950-1959",1995],[76972,"Connie Hawkins","F",null,"1974-1975",1992],[77414,"Clyde
+        Lovellette","C",null,"1954-1957",1988],[77480,"Slater Martin","G",null,"1950-1956",1982],[78497,"Jerry
+        West","G",null,"1961-1974",1980],[76375,"Wilt Chamberlain","C",null,"1969-1973",1979],[77867,"Jim
+        Pollard","F",null,"1949-1955",1978],[76127,"Elgin Baylor","F",null,"1959-1972",1977],[600012,"George
+        Mikan","C",null,"1949-1956",1959]]},{"name":"TeamRetired","headers":["PLAYERID","PLAYER","POSITION","JERSEY","SEASONSWITHTEAM","YEAR"],"rowSet":[[2200,"Pau
+        Gasol","F-C","16","2007-2014",2023],[977,"Kobe Bryant","G","8,24","1996-2016",2017],[406,"Shaquille
+        O''Neal","C","34","1997-2004",2013],[78532,"Jamaal Wilkes","F","52","1978-1985",2012],[null,"Chick
+        Hearn","Broadcaster"," ","1962-2002",2002],[76832,"Gail Goodrich","G","25","1966-1968,
+        1971-1976",1996],[1460,"James Worthy","F","42","1983-1994",1995],[77142,"Earvin
+        \"Magic\" Johnson","G","32","1980-1991, 1996",1992],[76003,"Kareem Abdul-Jabbar","C","33","1976-1989",1989],[76127,"Elgin
+        Baylor","F","22","1959-1972",1983],[78497,"Jerry West","G","44","1961-1974",1983],[76375,"Wilt
+        Chamberlain","C","13","1969-1973",1983]]},{"name":"TeamAwardsCommCup","headers":["YEARAWARDED","OPPOSITETEAM"],"rowSet":[]}]}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '1779'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Fri, 19 Jun 2026 04:29:25 GMT
+      Set-Cookie:
+      - bm_s=YAAQ09fOF1JY0MyeAQAAvw0k3gURgOWDy/9tl9I4EhHv5pOC5IxZyzOS2qnipAjbMy5OyPPpBIo1uvRBy1xdy6oYl6/oNKPrzQz9Xr2g/nTdQJIiMG0WaN1KRmwlOrLgtV9YGT2pbuQh3lYgtYmzyBYYYyQj9Hr+ycTaSuHTFsNDSIn9VUfAWqvOje2t7w/EZkvR698Fe6nczYriFr5tS0zeQmCMO+Fk2Jd76rWkBW4ldZz4+lIG/uzFdrhcgEcI98ElRdbnE/wmvLy4KBoVD8o1SNyF4EAAzVNT5W5Hhjy6SVaAFb5Bo1JqqinYCjoiz+/45DZ8uT2VdRAo5DM1pOalwnagbLR7BEnYqbL/fDtdrOnZRa3VinALG4QmLc6rZ670XOpysReafSjzWDgujiz4Yja2Zv00yIxPntLJg25Qy1p2e1cEm7Fhu8f1lwsXcMSKjuvztZ/W2l9Xp2+/mRF+q5XIMUibnkdN2fbHToL7qvWL/aHpw8xLlf5U+EJQZ4zhpqkBn5SZrhwkEWK14Y5kpnpxn7cJ3aMt4Irm9XhXZ4bxQF6K+o3kOXiMYWdgp699k57hrlU+DvQWhFl4YQDP1Dt1ghsVKEgk6hO3ylGp8Fo2W+ChSs/HTo5AWe2C/4CNyGfJABged+lllsTGgM90hXgcqLuoraE1420pk7j5PY32aYCAS9DeRekZEBBB+UIGViT5Av9/4Gtj7ZrripIhlD4a+1LrfKs0RspNZ11NTaLrsegwC0VC90NFCyfL2WGLkK9vvVuGm/0Ir0W40kBjyvibwP/bZdj3Xw/mmOoKPoz7GqP8XjdZTjRGdWz37ZlUGO8WrSRJyaHm0mfayRrEMgSNmG+ObpDvaZGOAL2388ipkfhbJ2WQYF7Pgv9ZYex3qHL5BQHd;
+        Domain=.nba.com; Path=/; Expires=Mon, 20 Jul 2026 04:29:25 GMT; Max-Age=2678400;
+        Secure; HttpOnly
+      Strict-Transport-Security:
+      - max-age=86400
+      Vary:
+      - Accept-Encoding
+      x-cache-ability:
+      - cacheable
+      x-datasource:
+      - S3
+      x-envoy-upstream-service-time:
+      - '0'
+      x-full-ttl:
+      - '1800.000'
+      x-grace:
+      - '86400.000'
+      x-hits:
+      - '3'
+      x-keep:
+      - '0.000'
+      x-status:
+      - hit
+      x-ttl:
+      - '1663.723'
+      x-varnish:
+      - 15460073 15819573
+      x-vcl-region:
+      - West US2
+      x-vcl-version:
+      - NBA.com prod 1.7a
+    status:
+      code: 200
+      message: OK
+version: 1
