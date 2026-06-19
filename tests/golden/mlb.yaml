@@ -1,0 +1,470 @@
+# MLB golden facts — verified via Wikipedia
+# Each fact was confirmed from the source URL before writing.
+
+# ─── Barry Bonds records ─────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.001
+  sport: mlb
+  question: "How many home runs did Barry Bonds hit in the 2001 season?"
+  expected_value: "73"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.002
+  sport: mlb
+  question: "What was Barry Bonds' on-base percentage in the 2001 season?"
+  expected_value: ".515"
+  stat: on_base_pct
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.003
+  sport: mlb
+  question: "What was Barry Bonds' slugging percentage in the 2001 season?"
+  expected_value: ".863"
+  stat: slugging_pct
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.004
+  sport: mlb
+  question: "How many walks did Barry Bonds draw in the 2001 season?"
+  expected_value: "177"
+  stat: walks
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.005
+  sport: mlb
+  question: "How many home runs did Barry Bonds hit in the 2002 season?"
+  expected_value: "46"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.006
+  sport: mlb
+  question: "What was Barry Bonds' batting average in the 2002 season?"
+  expected_value: ".370"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.007
+  sport: mlb
+  question: "How many walks did Barry Bonds draw in the 2002 season?"
+  expected_value: "198"
+  stat: walks
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.008
+  sport: mlb
+  question: "How many intentional walks did Barry Bonds receive in the 2002 season?"
+  expected_value: "68"
+  stat: walks
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.009
+  sport: mlb
+  question: "What is Barry Bonds' career home run total?"
+  expected_value: "762"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Barry_Bonds
+  verified_against: wikipedia
+
+# ─── Babe Ruth records ───────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.010
+  sport: mlb
+  question: "How many home runs did Babe Ruth hit in the 1927 season?"
+  expected_value: "60"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.011
+  sport: mlb
+  question: "What was Babe Ruth's batting average in the 1927 season?"
+  expected_value: ".356"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.012
+  sport: mlb
+  question: "How many RBI did Babe Ruth have in the 1927 season?"
+  expected_value: "164"
+  stat: rbi
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.013
+  sport: mlb
+  question: "What is Babe Ruth's career batting average?"
+  expected_value: ".342"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.014
+  sport: mlb
+  question: "What is Babe Ruth's career slugging percentage?"
+  expected_value: ".690"
+  stat: slugging_pct
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.015
+  sport: mlb
+  question: "What is Babe Ruth's career home run total?"
+  expected_value: "714"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.016
+  sport: mlb
+  question: "How many home runs did Babe Ruth hit in the 1920 season?"
+  expected_value: "54"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.017
+  sport: mlb
+  question: "How many times did Babe Ruth lead the American League in home runs?"
+  expected_value: "12"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Babe_Ruth
+  verified_against: wikipedia
+
+# ─── Nolan Ryan records ──────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.018
+  sport: mlb
+  question: "What is Nolan Ryan's career strikeout total?"
+  expected_value: "5714"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Nolan_Ryan
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.019
+  sport: mlb
+  question: "How many strikeouts did Nolan Ryan record in the 1973 season?"
+  expected_value: "383"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Nolan_Ryan
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.020
+  sport: mlb
+  question: "What is Joe DiMaggio's career RBI total?"
+  expected_value: "1537"
+  stat: rbi
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.021
+  sport: mlb
+  question: "What is Nolan Ryan's career ERA?"
+  expected_value: "3.19"
+  stat: era
+  source_url: https://en.wikipedia.org/wiki/Nolan_Ryan
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.022
+  sport: mlb
+  question: "How many career wins did Nolan Ryan accumulate?"
+  expected_value: "324"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/Nolan_Ryan
+  verified_against: wikipedia
+
+# ─── Pete Rose records ───────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.023
+  sport: mlb
+  question: "What is Pete Rose's career hit total?"
+  expected_value: "4256"
+  stat: hits
+  source_url: https://en.wikipedia.org/wiki/Pete_Rose
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.024
+  sport: mlb
+  question: "On what date did Pete Rose break Ty Cobb's all-time hits record?"
+  expected_value: "September 11, 1985"
+  stat: hits
+  source_url: https://en.wikipedia.org/wiki/Pete_Rose
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.025
+  sport: mlb
+  question: "What was Pete Rose's career batting average?"
+  expected_value: ".303"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Pete_Rose
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.026
+  sport: mlb
+  question: "How many career games did Pete Rose play?"
+  expected_value: "3562"
+  stat: games_played
+  source_url: https://en.wikipedia.org/wiki/Pete_Rose
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.027
+  sport: mlb
+  question: "How many career at-bats did Pete Rose have?"
+  expected_value: "14053"
+  stat: at_bats
+  source_url: https://en.wikipedia.org/wiki/Pete_Rose
+  verified_against: wikipedia
+
+# ─── Hank Aaron records ──────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.028
+  sport: mlb
+  question: "What is Hank Aaron's career home run total?"
+  expected_value: "755"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.029
+  sport: mlb
+  question: "On what date did Hank Aaron hit his record-breaking 715th home run?"
+  expected_value: "April 8, 1974"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.030
+  sport: mlb
+  question: "What is Hank Aaron's career RBI total?"
+  expected_value: "2297"
+  stat: rbi
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.031
+  sport: mlb
+  question: "How many career total bases did Hank Aaron accumulate?"
+  expected_value: "6856"
+  stat: hits
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.032
+  sport: mlb
+  question: "How many home runs did Hank Aaron hit in the 1971 season?"
+  expected_value: "47"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.033
+  sport: mlb
+  question: "What is Hank Aaron's career batting average?"
+  expected_value: ".305"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Hank_Aaron
+  verified_against: wikipedia
+
+# ─── Ty Cobb records ─────────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.034
+  sport: mlb
+  question: "What is Ty Cobb's career batting average?"
+  expected_value: ".366"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ty_Cobb
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.035
+  sport: mlb
+  question: "How many batting titles did Ty Cobb win?"
+  expected_value: "12"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ty_Cobb
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.036
+  sport: mlb
+  question: "What was Ty Cobb's batting average in the 1911 season?"
+  expected_value: ".420"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ty_Cobb
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.037
+  sport: mlb
+  question: "What is Ty Cobb's career stolen base total?"
+  expected_value: "897"
+  stat: stolen_bases
+  source_url: https://en.wikipedia.org/wiki/Ty_Cobb
+  verified_against: wikipedia
+
+# ─── Randy Johnson stats ─────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.038
+  sport: mlb
+  question: "What is Randy Johnson's career strikeout total?"
+  expected_value: "4875"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Randy_Johnson
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.039
+  sport: mlb
+  question: "How many strikeouts did Randy Johnson record in the 2001 season?"
+  expected_value: "372"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Randy_Johnson
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.040
+  sport: mlb
+  question: "What is Joe DiMaggio's career home run total?"
+  expected_value: "361"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.041
+  sport: mlb
+  question: "What is Randy Johnson's career ERA?"
+  expected_value: "3.29"
+  stat: era
+  source_url: https://en.wikipedia.org/wiki/Randy_Johnson
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.042
+  sport: mlb
+  question: "How many career wins did Randy Johnson accumulate?"
+  expected_value: "303"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/Randy_Johnson
+  verified_against: wikipedia
+
+# ─── Roger Clemens stats ─────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.043
+  sport: mlb
+  question: "What is Roger Clemens' career strikeout total?"
+  expected_value: "4672"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.044
+  sport: mlb
+  question: "What is Roger Clemens' career ERA?"
+  expected_value: "3.12"
+  stat: era
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.045
+  sport: mlb
+  question: "How many career wins did Roger Clemens accumulate?"
+  expected_value: "354"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.046
+  sport: mlb
+  question: "How many strikeouts did Roger Clemens record in the 1986 season?"
+  expected_value: "238"
+  stat: strikeouts_pitching
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.047
+  sport: mlb
+  question: "What was Roger Clemens' win-loss record in the 1986 season?"
+  expected_value: "24-4"
+  stat: wins
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.048
+  sport: mlb
+  question: "What was Roger Clemens' ERA in the 1986 season?"
+  expected_value: "2.48"
+  stat: era
+  source_url: https://en.wikipedia.org/wiki/Roger_Clemens
+  verified_against: wikipedia
+
+# ─── Joe DiMaggio streak ─────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.049
+  sport: mlb
+  question: "How many consecutive games did Joe DiMaggio hit safely in 1941?"
+  expected_value: "56"
+  stat: games_played
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.050
+  sport: mlb
+  question: "What is Joe DiMaggio's career batting average?"
+  expected_value: ".325"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Joe_DiMaggio
+  verified_against: wikipedia
+
+# ─── Ted Williams records ────────────────────────────────────────────────────
+
+- fact_id: mlb.golden.051
+  sport: mlb
+  question: "What was Ted Williams' batting average in the 1941 season?"
+  expected_value: ".406"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.052
+  sport: mlb
+  question: "What is Ted Williams' career batting average?"
+  expected_value: ".344"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.053
+  sport: mlb
+  question: "What is Ted Williams' career on-base percentage?"
+  expected_value: ".482"
+  stat: on_base_pct
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.054
+  sport: mlb
+  question: "What is Ted Williams' career OPS?"
+  expected_value: "1.116"
+  stat: ops
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.055
+  sport: mlb
+  question: "What is Ted Williams' career home run total?"
+  expected_value: "521"
+  stat: home_runs
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia
+
+- fact_id: mlb.golden.056
+  sport: mlb
+  question: "How many batting titles did Ted Williams win?"
+  expected_value: "6"
+  stat: batting_avg
+  source_url: https://en.wikipedia.org/wiki/Ted_Williams
+  verified_against: wikipedia

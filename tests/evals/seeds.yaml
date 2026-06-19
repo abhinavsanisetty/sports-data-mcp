@@ -1,0 +1,653 @@
+# Seed questions for eval harness — 36 cells (6 sports × 6 tool_categories)
+# Each entry is validated as SeedQuestion; args must match contract.py arg models.
+
+# ─── NBA ──────────────────────────────────────────────────────────────────────
+
+- id: nba.ps.001
+  sport: nba
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were LeBron James's stats in the 2012-13 season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nba
+      player_name: "LeBron James"
+      season: "2012-13"
+
+- id: nba.ps.002
+  sport: nba
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Michael Jordan's stats in the 1995-96 season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nba
+      player_name: "Michael Jordan"
+      season: "1995-96"
+
+- id: nba.pgl.001
+  sport: nba
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Stephen Curry's game log for the 2015-16 season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: nba
+      player_name: "Stephen Curry"
+      season: "2015-16"
+
+- id: nba.pgl.002
+  sport: nba
+  tool_category: player_game_log
+  difficulty: medium
+  phrasing: conversational
+  question: "How did Kobe Bryant perform game by game in the 2005-06 season?"
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: nba
+      player_name: "Kobe Bryant"
+      season: "2005-06"
+
+- id: nba.ts.001
+  sport: nba
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were the Golden State Warriors' team stats in the 2015-16 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: nba
+      team_name: "Golden State Warriors"
+      season: "2015-16"
+
+- id: nba.tgl.001
+  sport: nba
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me the Chicago Bulls' game log for the 1995-96 season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: nba
+      team_name: "Chicago Bulls"
+      season: "1995-96"
+
+- id: nba.ll.001
+  sport: nba
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led the NBA in scoring in the 2022-23 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: nba
+      stat: points
+      season: "2022-23"
+
+- id: nba.th.001
+  sport: nba
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Los Angeles Lakers franchise?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: nba
+      team_name: "Los Angeles Lakers"
+
+- id: nba.th.002
+  sport: nba
+  tool_category: team_history
+  difficulty: medium
+  phrasing: conversational
+  question: "How many championships have the Boston Celtics won?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: nba
+      team_name: "Boston Celtics"
+
+# ─── NFL ──────────────────────────────────────────────────────────────────────
+
+- id: nfl.ps.001
+  sport: nfl
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Peyton Manning's stats in the 2013 NFL season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nfl
+      player_name: "Peyton Manning"
+      season: "2013"
+
+- id: nfl.ps.002
+  sport: nfl
+  tool_category: player_stats
+  difficulty: medium
+  phrasing: conversational
+  question: "How many touchdowns and yards did Jerry Rice accumulate in his career?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nfl
+      player_name: "Jerry Rice"
+
+- id: nfl.pgl.001
+  sport: nfl
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Patrick Mahomes's game log for the 2018 NFL season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: nfl
+      player_name: "Patrick Mahomes"
+      season: "2018"
+
+- id: nfl.ts.001
+  sport: nfl
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were the New England Patriots' team stats in the 2007 NFL season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: nfl
+      team_name: "New England Patriots"
+      season: "2007"
+
+- id: nfl.ts.002
+  sport: nfl
+  tool_category: team_stats
+  difficulty: medium
+  phrasing: literal
+  question: "What were the San Francisco 49ers' stats in the 2019 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: nfl
+      team_name: "San Francisco 49ers"
+      season: "2019"
+
+- id: nfl.tgl.001
+  sport: nfl
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me the Kansas City Chiefs' game log for the 2022 NFL season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: nfl
+      team_name: "Kansas City Chiefs"
+      season: "2022"
+
+- id: nfl.ll.001
+  sport: nfl
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led the NFL in passing yards in the 2013 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: nfl
+      stat: passing_yards
+      season: "2013"
+
+- id: nfl.ll.002
+  sport: nfl
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led the NFL in rushing yards in the 2012 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: nfl
+      stat: rushing_yards
+      season: "2012"
+
+- id: nfl.th.001
+  sport: nfl
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Dallas Cowboys franchise?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: nfl
+      team_name: "Dallas Cowboys"
+
+# ─── MLB ──────────────────────────────────────────────────────────────────────
+
+- id: mlb.ps.001
+  sport: mlb
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Barry Bonds's stats in the 2001 MLB season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: mlb
+      player_name: "Barry Bonds"
+      season: "2001"
+
+- id: mlb.ps.002
+  sport: mlb
+  tool_category: player_stats
+  difficulty: medium
+  phrasing: conversational
+  question: "What were Babe Ruth's career stats?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: mlb
+      player_name: "Babe Ruth"
+
+- id: mlb.pgl.001
+  sport: mlb
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Shohei Ohtani's game log for the 2023 MLB season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: mlb
+      player_name: "Shohei Ohtani"
+      season: "2023"
+
+- id: mlb.ts.001
+  sport: mlb
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were the New York Yankees' team stats in the 1998 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: mlb
+      team_name: "New York Yankees"
+      season: "1998"
+
+- id: mlb.ts.002
+  sport: mlb
+  tool_category: team_stats
+  difficulty: medium
+  phrasing: literal
+  question: "What were the Chicago Cubs' stats in the 2016 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: mlb
+      team_name: "Chicago Cubs"
+      season: "2016"
+
+- id: mlb.tgl.001
+  sport: mlb
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me the Houston Astros' game log for the 2017 MLB season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: mlb
+      team_name: "Houston Astros"
+      season: "2017"
+
+- id: mlb.ll.001
+  sport: mlb
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led MLB in home runs in the 2001 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: mlb
+      stat: home_runs
+      season: "2001"
+
+- id: mlb.ll.002
+  sport: mlb
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who had the best ERA in MLB in the 2014 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: mlb
+      stat: era
+      season: "2014"
+
+- id: mlb.th.001
+  sport: mlb
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Boston Red Sox franchise?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: mlb
+      team_name: "Boston Red Sox"
+
+# ─── NHL ──────────────────────────────────────────────────────────────────────
+
+- id: nhl.ps.001
+  sport: nhl
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Wayne Gretzky's stats in the 1981-82 NHL season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nhl
+      player_name: "Wayne Gretzky"
+      season: "1981-82"
+
+- id: nhl.ps.002
+  sport: nhl
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Mario Lemieux's stats in the 1992-93 season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: nhl
+      player_name: "Mario Lemieux"
+      season: "1992-93"
+
+- id: nhl.pgl.001
+  sport: nhl
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Connor McDavid's game log for the 2021-22 NHL season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: nhl
+      player_name: "Connor McDavid"
+      season: "2021-22"
+
+- id: nhl.ts.001
+  sport: nhl
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were the Detroit Red Wings' team stats in the 1995-96 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: nhl
+      team_name: "Detroit Red Wings"
+      season: "1995-96"
+
+- id: nhl.tgl.001
+  sport: nhl
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me the Tampa Bay Lightning's game log for the 2020-21 NHL season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: nhl
+      team_name: "Tampa Bay Lightning"
+      season: "2020-21"
+
+- id: nhl.ll.001
+  sport: nhl
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led the NHL in goals in the 2021-22 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: nhl
+      stat: goals
+      season: "2021-22"
+
+- id: nhl.th.001
+  sport: nhl
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Montreal Canadiens franchise?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: nhl
+      team_name: "Montreal Canadiens"
+
+- id: nhl.th.002
+  sport: nhl
+  tool_category: team_history
+  difficulty: medium
+  phrasing: conversational
+  question: "How many Stanley Cups have the Toronto Maple Leafs won?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: nhl
+      team_name: "Toronto Maple Leafs"
+
+# ─── SOCCER ───────────────────────────────────────────────────────────────────
+
+- id: soccer.ps.001
+  sport: soccer
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Cristiano Ronaldo's stats in the 2011-12 season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: soccer
+      player_name: "Cristiano Ronaldo"
+      season: "2011-12"
+
+- id: soccer.ps.002
+  sport: soccer
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Erling Haaland's stats in the 2022-23 Premier League season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: soccer
+      player_name: "Erling Haaland"
+      season: "2022-23"
+
+- id: soccer.pgl.001
+  sport: soccer
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Lionel Messi's game log for the 2022-23 season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: soccer
+      player_name: "Lionel Messi"
+      season: "2022-23"
+
+- id: soccer.ts.001
+  sport: soccer
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Manchester City's team stats in the 2022-23 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: soccer
+      team_name: "Manchester City"
+      season: "2022-23"
+
+- id: soccer.tgl.001
+  sport: soccer
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Barcelona's game log for the 2014-15 season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: soccer
+      team_name: "Barcelona"
+      season: "2014-15"
+
+- id: soccer.ll.001
+  sport: soccer
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led in goals in the 2022-23 soccer season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: soccer
+      stat: goals
+      season: "2022-23"
+
+- id: soccer.th.001
+  sport: soccer
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Real Madrid football club?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: soccer
+      team_name: "Real Madrid"
+
+- id: soccer.th.002
+  sport: soccer
+  tool_category: team_history
+  difficulty: medium
+  phrasing: conversational
+  question: "How many Champions League titles has Liverpool FC won?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: soccer
+      team_name: "Liverpool FC"
+
+# ─── NCAA ─────────────────────────────────────────────────────────────────────
+
+- id: ncaa.ps.001
+  sport: ncaa
+  tool_category: player_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were Zion Williamson's stats in the 2018-19 college season?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: ncaa
+      player_name: "Zion Williamson"
+      season: "2018-19"
+
+- id: ncaa.ps.002
+  sport: ncaa
+  tool_category: player_stats
+  difficulty: hard
+  phrasing: conversational
+  question: "What was Pete Maravich's scoring average in the 1969-70 season at LSU?"
+  expected_plan:
+    tool: get_player_stats
+    args:
+      sport: ncaa
+      player_name: "Pete Maravich"
+      season: "1969-70"
+
+- id: ncaa.pgl.001
+  sport: ncaa
+  tool_category: player_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me Caitlin Clark's game log for the 2022-23 college season."
+  expected_plan:
+    tool: get_player_game_log
+    args:
+      sport: ncaa
+      player_name: "Caitlin Clark"
+      season: "2022-23"
+
+- id: ncaa.ts.001
+  sport: ncaa
+  tool_category: team_stats
+  difficulty: easy
+  phrasing: literal
+  question: "What were the Duke Blue Devils' team stats in the 2014-15 season?"
+  expected_plan:
+    tool: get_team_stats
+    args:
+      sport: ncaa
+      team_name: "Duke Blue Devils"
+      season: "2014-15"
+
+- id: ncaa.tgl.001
+  sport: ncaa
+  tool_category: team_game_log
+  difficulty: easy
+  phrasing: literal
+  question: "Show me the Connecticut Huskies' game log for the 2023-24 season."
+  expected_plan:
+    tool: get_team_game_log
+    args:
+      sport: ncaa
+      team_name: "Connecticut Huskies"
+      season: "2023-24"
+
+- id: ncaa.ll.001
+  sport: ncaa
+  tool_category: league_leaders
+  difficulty: easy
+  phrasing: literal
+  question: "Who led NCAA basketball in scoring in the 2022-23 season?"
+  expected_plan:
+    tool: get_league_leaders
+    args:
+      sport: ncaa
+      stat: points
+      season: "2022-23"
+
+- id: ncaa.th.001
+  sport: ncaa
+  tool_category: team_history
+  difficulty: easy
+  phrasing: literal
+  question: "What is the history of the Kentucky Wildcats basketball program?"
+  expected_plan:
+    tool: get_team_history
+    args:
+      sport: ncaa
+      team_name: "Kentucky Wildcats"

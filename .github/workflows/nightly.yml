@@ -1,0 +1,35 @@
+name: Nightly Eval
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+jobs:
+  full-eval:
+    runs-on: ubuntu-latest
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+
+      - name: Install dependencies
+        run: poetry install --no-root --with dev
+
+      - name: Run harness tests
+        run: poetry run pytest tests/evals/test_schema.py tests/evals/test_harness.py -v
+
+      # Full NL eval scoring is wired in Phase 4 — placeholder below
+      # - name: Full NL eval gate
+      #   run: poetry run python -m sports_data_mcp.eval.run_nl_eval --gate
