@@ -152,7 +152,7 @@ class NBAAdapter(BaseSportAdapter):
                         "minutes": str(row["MIN"]),
                     }
                 )
-            return {"games": games}
+            return games
 
         elif query_type == "team_stats":
             with limit_sync("stats.nba.com"):
@@ -210,7 +210,7 @@ class NBAAdapter(BaseSportAdapter):
                         "assists": int(row["AST"]),
                     }
                 )
-            return {"games": games}
+            return games
 
         elif query_type == "league_leaders":
             stat_map = {
@@ -231,29 +231,31 @@ class NBAAdapter(BaseSportAdapter):
             for _, row in df.iterrows():
                 leaders_list.append(
                     {
-                        "player_name": str(row["PLAYER_NAME"]),
+                        "player_name": str(row["PLAYER"]),
                         "rank": int(row["RANK"]),
                         "value": float(row[nba_stat]),
-                        "team": str(row["TEAM_ABBREVIATION"]),
+                        "team": str(row["TEAM"]),
                     }
                 )
-            return {"leaders": leaders_list}
+            return leaders_list
 
         elif query_type == "team_history":
             with limit_sync("stats.nba.com"):
                 details = teamdetails.TeamDetails(team_id=kwargs["team_id"])
             df_details = details.get_data_frames()[0]
-            df_championships = details.get_data_frames()[1]
 
             if df_details.empty:
                 raise ValueError(f"No details found for team ID {kwargs['team_id']}.")
             row = df_details.iloc[0]
 
             championship_years = []
-            if not df_championships.empty and "YEARCHAMPIONSHIP" in df_championships:
-                championship_years = [
-                    int(y) for y in df_championships["YEARCHAMPIONSHIP"].dropna()
-                ]
+            dfs = details.get_data_frames()
+            if len(dfs) > 3:
+                df_championships = dfs[3]
+                if not df_championships.empty and "YEARAWARDED" in df_championships:
+                    championship_years = [
+                        int(y) for y in df_championships["YEARAWARDED"].dropna()
+                    ]
 
             core = {
                 "year_founded": int(row.get("YEARFOUNDED", 0)),
@@ -366,7 +368,7 @@ class NBAAdapter(BaseSportAdapter):
         )
 
         res = out["result"]
-        games = res["games"][:limit]
+        games = res[:limit]
         core = {"games": games}
         sport_specific = NBAExt()
 
@@ -452,7 +454,7 @@ class NBAAdapter(BaseSportAdapter):
         )
 
         res = out["result"]
-        games = res["games"][:limit]
+        games = res[:limit]
         core = {"games": games}
         sport_specific = NBAExt()
 
@@ -493,7 +495,7 @@ class NBAAdapter(BaseSportAdapter):
         )
 
         res = out["result"]
-        leaders = res["leaders"][:limit]
+        leaders = res[:limit]
         core = {"leaders": leaders}
         sport_specific = NBAExt()
 
