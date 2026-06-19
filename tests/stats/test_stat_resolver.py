@@ -198,3 +198,27 @@ def test_mlb_aliases_cover_avg_era_hr():
     assert "avg" in STAT_ALIASES["mlb"]
     # era is in the enum, so alias is redundant but can still be present
     assert "hr" in STAT_ALIASES["mlb"]
+
+
+# ---------------------------------------------------------------------------
+# API key must not leak into logs even via an exception arg (§4.3.b)
+# ---------------------------------------------------------------------------
+
+
+def test_api_key_not_leaked_in_logs_on_failure(caplog):
+    fake_key = "AIzaSyD1234567890abcdefGHIJKLmnopQRSTuv"
+    r = StatResolver(api_key=fake_key)
+
+    def _boom(*_a, **_k):
+        raise OSError(
+            "connection failed to "
+            "https://generativelanguage.googleapis.com/v1beta/models/"
+            f"gemini-2.0-flash:generateContent?key={fake_key}"
+        )
+
+    with caplog.at_level("DEBUG"), patch("urllib.request.urlopen", side_effect=_boom):
+        result = r.resolve("scoring average", "nba")
+
+    assert result.tier == "unknown"  # never raises
+    assert fake_key not in caplog.text
+    assert "***" in caplog.text

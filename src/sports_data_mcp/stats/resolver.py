@@ -32,14 +32,16 @@ _KEY_PATTERN = re.compile(r"AIza[0-9A-Za-z\-_]{10,}")
 
 class _RedactFilter(logging.Filter):
     def filter(self, record: logging.LogRecord) -> bool:
-        if isinstance(record.msg, str):
-            record.msg = _KEY_PATTERN.sub("***", record.msg)
-        if record.args:
-            if isinstance(record.args, tuple):
-                record.args = tuple(
-                    _KEY_PATTERN.sub("***", a) if isinstance(a, str) else a
-                    for a in record.args
-                )
+        # Render the full message (including args such as Exception objects whose
+        # str() can embed the API-keyed URL) and redact the result, then clear
+        # args so downstream formatting is a no-op. Redacting only string args
+        # missed non-string args like exceptions, leaking the key (§4.3.b).
+        try:
+            rendered = record.getMessage()
+        except Exception:
+            rendered = str(record.msg)
+        record.msg = _KEY_PATTERN.sub("***", rendered)
+        record.args = None
         return True
 
 
